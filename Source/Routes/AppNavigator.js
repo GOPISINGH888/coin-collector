@@ -3,7 +3,10 @@ import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../Screens/HomeScreen';
-import New from '../Screens/New';
+import Buy from '../Screens/Buy';
+import Payment from '../Screens/Payment';
+import Cards from '../Screens/Cards';
+import Paypal from '../Screens/Paypal';
 
 const Stack = createStackNavigator();
 
@@ -12,10 +15,13 @@ function AppNavigator() {
     <NavigationContainer>
       <Stack.Navigator
        headerMode='none'
-       initialRouteName='New'
+       initialRouteName='Cards'
       >
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="New" component={New} />
+        <Stack.Screen name="Buy" component={Buy} />
+        <Stack.Screen name="Payment" component={Payment} />
+        <Stack.Screen name="Cards" component={Cards} />
+        <Stack.Screen name="Paypal" component={Paypal} />
       </Stack.Navigator>
     </NavigationContainer>
   );
