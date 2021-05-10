@@ -1,40 +1,36 @@
-import React, { useState } from "react";
-import { CheckBox, Text, StyleSheet, View } from "react-native";
+// import React, { useState } from "react";
+// import { Text, View } from "react-native";
+// import CheckBox from 'native-base'
 
-const Customcheckbox = (props) => {
-  const [isSelected, setSelection] = useState(false);
 
-  return (
-    <View style={styles.container}>
-      <View style={styles.checkboxContainer}>
-        <CheckBox
-          value={isSelected}
-          onValueChange={setSelection}
-          style={styles.checkbox}
-        />
-        <Text style={styles.label}>{props.checktext}</Text>
-      </View>
-      <Text>Is Check</Text>
-    </View>
-  );
-};
+// const [isSelected, setSelection] = useState(false);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  checkboxContainer: {
-    flexDirection: "row",
-    marginBottom: 20,
-  },
-  checkbox: {
-    alignSelf: "center",
-  },
-  label: {
-    margin: 8,
-  },
-});
+// const Customcheckbox = (props) => {
+  
 
-export default Customcheckbox;
+//   return (
+//     <View style={{
+//       flex: 1,
+//       alignItems: "center",
+//       justifyContent: "center",
+//     }}>
+//       <View style={{
+//     flexDirection: "row",
+//     marginBottom: 20,
+//   }}>
+//         <CheckBox
+//           value={isSelected}
+//           onValueChange={setSelection}
+//           style={{
+//             alignSelf: "center",
+//           }}
+//         />
+//         <Text style={{
+//     margin: 8,
+//   }}>{props.checktext}</Text>
+//       </View>
+//       <Text>Is Check</Text>
+//     </View>
+//   );
+// };
+// export default Customcheckbox;

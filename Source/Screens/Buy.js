@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { View, Text,Image } from 'react-native';
-import {Button,Container,Header,Left,Card,CardItem} from 'native-base'
+import {Button,Container,Header,Left,Card,CardItem,Checkbox} from 'native-base'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Buttn from '../Components/Buttn'
-import Payment from './Payment';
 
 function Buy({ navigation}) {
   return (
@@ -21,7 +20,7 @@ function Buy({ navigation}) {
        <Text style={{fontWeight:'bold',fontSize:25,fontFamily:'Berlin Sans FB'}}>$100.00</Text>
           </Card>
           </View>
-       <Buttn  Buttntxt ={'Purchase'}   />
+       <Buttn  text ={'Purchase'} onPress={()=>navigation.navigate('Payment')}  /> 
     </Container>
   );
 }
