@@ -116,7 +116,7 @@ function Cards({navigation}) {
       <View style={{marginTop: 40}}>
         <Buttn
           text={'Pay $150.00'}
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate('Payment')}
         />
       </View>
     </Container>

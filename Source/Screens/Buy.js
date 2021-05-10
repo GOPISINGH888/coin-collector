@@ -9,7 +9,7 @@ function Buy({ navigation}) {
     <Container>
        <View elevation={20} style={{backgroundColor:'#fff',padding:20,position:'relative',flexDirection:'row'}}>
         
-        <FontAwesome onPress={()=>navigation.navigate('Home')} name={'chevron-left'} size={20} />
+        <FontAwesome onPress={()=>navigation.navigate('Payment')} name={'chevron-left'} size={20} />
             <Text style={{textAlign:'center',paddingHorizontal:'40%',fontSize:16,fontFamily:'Berlin Sans FB',fontWeight:"bold"}}>BUY</Text>
       </View>
        <Image source={require('../Assests/shadowcoin.png')} style={{alignSelf:'center',marginTop:'18%',shadowColor:'grey'}} />
