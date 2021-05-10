@@ -1,10 +1,13 @@
-import * as React from 'react';
+import React,{useState} from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
-import {Button, Container, Header, Left, Card, CardItem} from 'native-base';
+import {Button, Container, Header, Left, Card, CardItem,CheckBox} from 'native-base';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import TextInput from '../Components/CustomTextInput';
 
 function Paypal({navigation}) {
+  const [checked, setChecked] = useState(false)
+  const handleClick = () => setChecked(!checked)
+  
   return (
     <Container>
       <View
@@ -33,9 +36,9 @@ function Paypal({navigation}) {
         secureTextEntry={true}
         
       />
-     <View style={{flexDirection:'row',alignSelf:'flex-start'}}>
-        <FontAwesome name={'check-square'} size={20} style={{color:'#000',marginTop:10}}/>
-        <Text style={{ marginTop: 9}}>
+     <View style={{flexDirection:'row',alignSelf:'flex-start',left:20}}>
+     <CheckBox onPress={handleClick} checked={checked} color='#707070' style={{borderWidth:0.5,borderRadius:4,borderWidth:1,margin:10,}}/>
+        <Text style={{ marginTop: 9,paddingHorizontal:7}}>
           Remember 
         </Text>
       </View>

@@ -1,5 +1,5 @@
 import {Card} from 'native-base';
-import React from 'react';
+import React,{useState} from 'react';
 import {
   View,
   Text,
@@ -8,13 +8,18 @@ import {
   Keyboard,
   KeyboardAvoidingView,
 } from 'react-native';
-import {Container} from 'native-base';
+import {Container,CheckBox} from 'native-base';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Buttn from '../Components/Buttn';
 import TextInput from '../Components/CustomTextInput';
 import Textinput2 from '../Components/Textinput2';
 
 function Cards({navigation}) {
+  
+  const [checked, setChecked] = useState(false)
+  const handleClick = () => setChecked(!checked)
+  
+
   return (
     <Container>
       <View
@@ -107,9 +112,10 @@ function Cards({navigation}) {
         <Textinput2 label="Security Number" placeholder="8181" />
       </View>
       <TextInput label="Zip/Postal Code" placeholder="8888888" />
-      <View style={{flexDirection:'row',alignSelf:'center'}}>
-        <FontAwesome name={'check-square'} size={20} style={{color:'#000',position:'relative',marginTop:10}}/>
-        <Text style={{ marginTop: 9}}>
+      <View style={{flexDirection:'row',alignSelf:'flex-start',left:20}}>
+      <CheckBox onPress={handleClick} checked={checked} color='#707070' style={{borderWidth:0.5,borderRadius:4,borderWidth:1,margin:10}}/>
+      
+        <Text style={{ marginTop: 9,left:5}}>
           Remember this card details
         </Text>
       </View>

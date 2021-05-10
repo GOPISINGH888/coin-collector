@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
-import {Button, Container, Header, Left, Card, CardItem} from 'native-base';
+import {Button, Container, Header, Left, Card, CardItem,CheckBox} from 'native-base';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Buttn from '../Components/Buttn';
 

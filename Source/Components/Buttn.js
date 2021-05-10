@@ -24,3 +24,5 @@ const Buttn = ({onPress, text, ...props}) => (
 );
 
 export default Buttn;
+
+
