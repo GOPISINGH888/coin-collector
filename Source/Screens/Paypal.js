@@ -3,12 +3,14 @@ import {View, Text, Image, TouchableOpacity} from 'react-native';
 import {Button, Container, Header, Left, Card, CardItem,CheckBox} from 'native-base';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import TextInput from '../Components/CustomTextInput';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 function Paypal({navigation}) {
   const [checked, setChecked] = useState(false)
   const handleClick = () => setChecked(!checked)
   
   return (
+    <KeyboardAwareScrollView>
     <Container>
       <View
         elevation={20}
@@ -69,6 +71,7 @@ function Paypal({navigation}) {
         <Text style={{color: '#404040', fontWeight: '600'}}>Sign Up</Text>
       </View>
     </Container>
+    </KeyboardAwareScrollView>
   );
 }
 

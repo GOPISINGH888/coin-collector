@@ -13,6 +13,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Buttn from '../Components/Buttn';
 import TextInput from '../Components/CustomTextInput';
 import Textinput2 from '../Components/Textinput2';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 function Cards({navigation}) {
   
@@ -21,6 +22,7 @@ function Cards({navigation}) {
   
 
   return (
+    <KeyboardAwareScrollView>
     <Container>
       <View
         elevation={20}
@@ -119,13 +121,14 @@ function Cards({navigation}) {
           Remember this card details
         </Text>
       </View>
-      <View style={{marginTop: 40}}>
+      <View style={{marginTop: 20}}>
         <Buttn
           text={'Pay $150.00'}
           onPress={() => navigation.navigate('Payment')}
         />
       </View>
     </Container>
+    </KeyboardAwareScrollView>
   );
 }
 
