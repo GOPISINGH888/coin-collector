@@ -1,8 +1,9 @@
 import React,{useState} from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
-import {Button, Container, Header, Left, Card, CardItem,CheckBox} from 'native-base';
+import { Container,CheckBox} from 'native-base';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import TextInput from '../Components/CustomTextInput';
+import CustomInput from '../Components/CustomInput'
+import CustomAbsolute from '../Components/CustomAbsolute'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 function Paypal({navigation}) {
@@ -31,13 +32,15 @@ function Paypal({navigation}) {
           style={{marginHorizontal: '32%'}}
         />
       </View>
-      <TextInput label="Emai" placeholder="Enter Your email id" keyboardType={'email-address'}/>
-      <TextInput
-        label="Password"
+      {/* <TextInput label="Emai" placeholder="Enter Your email id" keyboardType={'email-address'}/> */}
+      <CustomInput placeholder={'Enter your email id'} 
+           keyboardType="email-address" />
+           <CustomAbsolute title={'Email'}  />
+      <CustomInput
         placeholder="Enter Your Password"
         secureTextEntry={true}
-        
       />
+      <CustomAbsolute title={'Password'}  />
      <View style={{flexDirection:'row',alignSelf:'flex-start',left:20}}>
      <CheckBox onPress={handleClick} checked={checked} color='#707070' style={{borderWidth:0.5,borderRadius:4,borderWidth:1,margin:10,}}/>
         <Text style={{ marginTop: 9,paddingHorizontal:7}}>

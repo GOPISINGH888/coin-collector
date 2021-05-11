@@ -30,8 +30,10 @@ function SignUp(props)
           <CustomAbsolute title={'Address'}/>
           <CustomInput placeholder={' Enter your refer code'}/>
           <CustomAbsolute title={'Refer Code'}/>
+          <View style={{marginVertical:20}}>
           <Buttn text={'Sign Up'} 
           onPress={()=>props.navigation.navigate('Login')} />
+          </View>
            
         
           <View  style={{flexDirection:'row',marginLeft:70}}>

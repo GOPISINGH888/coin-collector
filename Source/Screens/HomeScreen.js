@@ -1,9 +1,13 @@
 import { Card, CardItem, Container, Content, Icon, Item, Text, View } from 'native-base'
 import React from 'react'
-import { StyleSheet, Image, ScrollView, FlatList, TouchableOpacity } from 'react-native'
+import { StyleSheet, Image, ScrollView, FlatList, TouchableOpacity,RefreshControl } from 'react-native'
 import Buttn from '../Components/Buttn'
 import HeaderComponent from '../Components/HeaderComponent'
 
+
+const wait = (timeout) => {
+    return new Promise(resolve => setTimeout(resolve, timeout));
+  }
 function HomeScreen(props) {
 
     const data = [
@@ -62,13 +66,26 @@ function HomeScreen(props) {
             </View>
         )
     }
+    const [refreshing, setRefreshing] = React.useState(false);
+
+const onRefresh = React.useCallback(() => {
+  setRefreshing(true);
+  wait(2000).then(() => setRefreshing(false));
+}, []);
 
     return (
         <View style={styles.mainContainer}>
             <HeaderComponent {...props}>
                 <Text {...props} style={styles.font}>HOME</Text>
             </HeaderComponent>
-            <ScrollView>
+            <ScrollView
+            refreshControl={
+                <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+              }
+            >
+                 
+       
+   
                 <View style={styles.alignment}>
                     <Card style={[styles.cardDesign, styles.alignment]}>
                         <CardItem style={[styles.upperCard, styles.alignment]}>

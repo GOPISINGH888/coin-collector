@@ -11,9 +11,10 @@ import {
 import {Container,CheckBox} from 'native-base';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Buttn from '../Components/Buttn';
-import TextInput from '../Components/CustomTextInput';
-import Textinput2 from '../Components/Textinput2';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import CustomInput from '../Components/CustomInput'
+import CustomAbsolute from '../Components/CustomAbsolute'
+import CustomAbsolute2 from '../Components/CustomAbsolute2'
 
 function Cards({navigation}) {
   
@@ -102,18 +103,44 @@ function Cards({navigation}) {
         </Card>
       </View>
 
-      <TextInput label="Card Number" placeholder="Enter your number" />
-      <TextInput label="Cardholder Name" placeholder="Enter your name" />
+      <CustomInput
+        placeholder="Enter your number" 
+        keyboardType="email-address"
+      />
+      <CustomAbsolute title={'Card Number'}  />
+
+      <CustomInput
+        placeholder="Enter your name" 
+        keyboardType="email-address"
+      />
+      <CustomAbsolute title={'Cardholder Name'}  />
       <View
         style={{
           flexDirection: 'row',
           justifyContent: 'space-evenly',
           paddingHorizontal: 27,
         }}>
-        <Textinput2 label="Expiry Data" placeholder="MM/YY" />
-        <Textinput2 label="Security Number" placeholder="8181" />
+      
+        <View style={{width:'51%'}}>
+        <CustomInput
+        placeholder="MM/YY" 
+        keyboardType="Number"
+      />
+      <CustomAbsolute2 title={' Expiry Data'}  />
       </View>
-      <TextInput label="Zip/Postal Code" placeholder="8888888" />
+<View style={{width:'51%'}}>
+        <CustomInput
+        placeholder="9898 " 
+        keyboardType="Number"
+      />
+      <CustomAbsolute2 title={' Security Number'}  />
+      </View>
+
+
+      </View>
+      <CustomInput  placeholder="8888888" />
+      <CustomAbsolute title={'Zip/Postal Code'}  />
+   
       <View style={{flexDirection:'row',alignSelf:'flex-start',left:20}}>
       <CheckBox onPress={handleClick} checked={checked} color='#707070' style={{borderWidth:0.5,borderRadius:4,borderWidth:1,margin:10}}/>
       

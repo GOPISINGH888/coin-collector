@@ -107,11 +107,15 @@ function InviteFriends({navigation}) {
       </View>
       <Modal
         isVisible={isModalVisible}
-        animationIn="bounceIn"
-        animationOut="bounceOut"
+        animationIn='fadeInUp'
+        animationOut='fadeOutDownBig'
         onSwipeComplete={() => setModalVisible(false)}
         swipeDirection="left"
-        onSwipeCancel={() => setModalVisible(true)}>
+        onSwipeCancel={() => setModalVisible(true)}
+        animationInTiming={1000}
+        animationOutTiming={1000}
+        >
+         
         <View style={{flex: 1}}>
           <Card
             style={{

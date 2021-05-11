@@ -14,7 +14,7 @@ function Login(props)
         <View style={{flex:1,backgroundColor:'white'}}>
             <Image source={require('../Assests/colony.jpg')} style={{alignSelf:'center',height:130,width:120,marginTop:40}}/>
             
-           <CustomInput placeholder={'     Enter your email id'} 
+           <CustomInput placeholder={'Enter your email id'} 
            keyboardType="email-address" />
            <CustomAbsolute title={'Email'}  />
           

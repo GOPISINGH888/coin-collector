@@ -9,7 +9,7 @@ function HeaderComponent(props) {
                 <Icon name='menu' onPress={()=>props.navigation.openDrawer()}>
                 </Icon>
                 <Text  {...props}></Text>
-                <Icon name='person'>
+                <Icon onPress={()=>props.navigation.navigate('Profile')}  name='person'>
                 </Icon>
             </Card>
         </View>
