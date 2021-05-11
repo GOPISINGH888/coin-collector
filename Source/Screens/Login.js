@@ -31,7 +31,7 @@ function Login(props)
           </TouchableOpacity>
            </View>
            <View style={{marginTop:30}}>
-           <Buttn onPress={()=>props.navigation.navigate('HomeScreen')} text={'Login'} />
+           <Buttn onPress={()=>props.navigation.navigate('DrawerNavigation')} text={'Login'} />
            </View>
            <View  style={{flexDirection:'row',marginLeft:70}}>
            <Text style={{marginTop:20,textAlign:'center',color:'#00000061'}}>Don't have an account?</Text>

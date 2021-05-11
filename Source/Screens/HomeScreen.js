@@ -4,7 +4,7 @@ import { StyleSheet, Image, ScrollView, FlatList, TouchableOpacity } from 'react
 import Buttn from '../Components/Buttn'
 import HeaderComponent from '../Components/HeaderComponent'
 
-function HomeScreen(props,{navigation}) {
+function HomeScreen(props) {
 
     const data = [
         {
