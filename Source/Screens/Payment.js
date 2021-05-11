@@ -23,7 +23,7 @@ function Payment({navigation}) {
         <Text
           style={{
             textAlign: 'center',
-            paddingHorizontal: '40%',
+            paddingHorizontal: '38%',
             fontSize: 16,
             fontFamily: 'Berlin Sans FB',
             fontWeight: 'bold',
